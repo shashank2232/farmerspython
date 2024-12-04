@@ -1,0 +1,31 @@
+version: '3.7'
+
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: venkatesh
+      POSTGRES_DB: farmer
+      POSTGRES_HOST_AUTH_METHOD: trust
+    ports:
+      - "5432:5432"
+
+  web:
+    image: farmerapp1:latest
+    command: flask run --host=0.0.0.0 --port=5001
+    ports:
+      - "5001:5001"
+    depends_on:
+      - db
+    environment:
+      FLASK_APP: app.py
+      SQLALCHEMY_DATABASE_URI: postgresql://venkatesh@db:5432/farmer
+
+  nginx:
+    image: nginx:stable
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf/default.conf
+    depends_on:
+      - web
