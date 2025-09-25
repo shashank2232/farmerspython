@@ -4,7 +4,6 @@ from flask_cors import CORS
 from flask_jwt_extended import JWTManager
 
 app = Flask(__name__)
-app.config['JWT_SECRET_KEY'] = '216300135e6752b3695e4d0fc2619f9645d1a5247a444b0abda6d98b72b6d320'
 
 CORS(app, resources={r"/*":{"origins":"http://localhost:4200"}})
 app.config.from_object('config.Config')
