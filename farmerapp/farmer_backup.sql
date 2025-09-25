@@ -21,7 +21,7 @@ SET default_tablespace = '';
 SET default_table_access_method = heap;
 
 --
--- Name: alembic_version; Type: TABLE; Schema: public; Owner: venkatesh
+-- Name: alembic_version; Type: TABLE; Schema: public; Owner: shashank
 --
 
 CREATE TABLE public.alembic_version (
@@ -29,10 +29,10 @@ CREATE TABLE public.alembic_version (
 );
 
 
-ALTER TABLE public.alembic_version OWNER TO venkatesh;
+ALTER TABLE public.alembic_version OWNER TO shashank;
 
 --
--- Name: countries; Type: TABLE; Schema: public; Owner: venkatesh
+-- Name: countries; Type: TABLE; Schema: public; Owner: shashank
 --
 
 CREATE TABLE public.countries (
@@ -41,10 +41,10 @@ CREATE TABLE public.countries (
 );
 
 
-ALTER TABLE public.countries OWNER TO venkatesh;
+ALTER TABLE public.countries OWNER TO shashank;
 
 --
--- Name: countries_id_seq; Type: SEQUENCE; Schema: public; Owner: venkatesh
+-- Name: countries_id_seq; Type: SEQUENCE; Schema: public; Owner: shashank
 --
 
 CREATE SEQUENCE public.countries_id_seq
@@ -56,17 +56,17 @@ CREATE SEQUENCE public.countries_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.countries_id_seq OWNER TO venkatesh;
+ALTER TABLE public.countries_id_seq OWNER TO shashank;
 
 --
--- Name: countries_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: venkatesh
+-- Name: countries_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: shashank
 --
 
 ALTER SEQUENCE public.countries_id_seq OWNED BY public.countries.id;
 
 
 --
--- Name: farmers; Type: TABLE; Schema: public; Owner: venkatesh
+-- Name: farmers; Type: TABLE; Schema: public; Owner: shashank
 --
 
 CREATE TABLE public.farmers (
@@ -78,10 +78,10 @@ CREATE TABLE public.farmers (
 );
 
 
-ALTER TABLE public.farmers OWNER TO venkatesh;
+ALTER TABLE public.farmers OWNER TO shashank;
 
 --
--- Name: farmers_id_seq; Type: SEQUENCE; Schema: public; Owner: venkatesh
+-- Name: farmers_id_seq; Type: SEQUENCE; Schema: public; Owner: shashank
 --
 
 CREATE SEQUENCE public.farmers_id_seq
@@ -93,17 +93,17 @@ CREATE SEQUENCE public.farmers_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.farmers_id_seq OWNER TO venkatesh;
+ALTER TABLE public.farmers_id_seq OWNER TO shashank;
 
 --
--- Name: farmers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: venkatesh
+-- Name: farmers_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: shashank
 --
 
 ALTER SEQUENCE public.farmers_id_seq OWNED BY public.farmers.id;
 
 
 --
--- Name: farms; Type: TABLE; Schema: public; Owner: venkatesh
+-- Name: farms; Type: TABLE; Schema: public; Owner: shashank
 --
 
 CREATE TABLE public.farms (
@@ -117,10 +117,10 @@ CREATE TABLE public.farms (
 );
 
 
-ALTER TABLE public.farms OWNER TO venkatesh;
+ALTER TABLE public.farms OWNER TO shashank;
 
 --
--- Name: farms_id_seq; Type: SEQUENCE; Schema: public; Owner: venkatesh
+-- Name: farms_id_seq; Type: SEQUENCE; Schema: public; Owner: shashank
 --
 
 CREATE SEQUENCE public.farms_id_seq
@@ -132,17 +132,17 @@ CREATE SEQUENCE public.farms_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.farms_id_seq OWNER TO venkatesh;
+ALTER TABLE public.farms_id_seq OWNER TO shashank;
 
 --
--- Name: farms_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: venkatesh
+-- Name: farms_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: shashank
 --
 
 ALTER SEQUENCE public.farms_id_seq OWNED BY public.farms.id;
 
 
 --
--- Name: schedules; Type: TABLE; Schema: public; Owner: venkatesh
+-- Name: schedules; Type: TABLE; Schema: public; Owner: shashank
 --
 
 CREATE TABLE public.schedules (
@@ -156,10 +156,10 @@ CREATE TABLE public.schedules (
 );
 
 
-ALTER TABLE public.schedules OWNER TO venkatesh;
+ALTER TABLE public.schedules OWNER TO shashank;
 
 --
--- Name: schedules_id_seq; Type: SEQUENCE; Schema: public; Owner: venkatesh
+-- Name: schedules_id_seq; Type: SEQUENCE; Schema: public; Owner: shashank
 --
 
 CREATE SEQUENCE public.schedules_id_seq
@@ -171,17 +171,17 @@ CREATE SEQUENCE public.schedules_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.schedules_id_seq OWNER TO venkatesh;
+ALTER TABLE public.schedules_id_seq OWNER TO shashank;
 
 --
--- Name: schedules_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: venkatesh
+-- Name: schedules_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: shashank
 --
 
 ALTER SEQUENCE public.schedules_id_seq OWNED BY public.schedules.id;
 
 
 --
--- Name: users; Type: TABLE; Schema: public; Owner: venkatesh
+-- Name: users; Type: TABLE; Schema: public; Owner: shashank
 --
 
 CREATE TABLE public.users (
@@ -192,10 +192,10 @@ CREATE TABLE public.users (
 );
 
 
-ALTER TABLE public.users OWNER TO venkatesh;
+ALTER TABLE public.users OWNER TO shashank;
 
 --
--- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: venkatesh
+-- Name: users_id_seq; Type: SEQUENCE; Schema: public; Owner: shashank
 --
 
 CREATE SEQUENCE public.users_id_seq
@@ -207,52 +207,52 @@ CREATE SEQUENCE public.users_id_seq
     CACHE 1;
 
 
-ALTER TABLE public.users_id_seq OWNER TO venkatesh;
+ALTER TABLE public.users_id_seq OWNER TO shashank;
 
 --
--- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: venkatesh
+-- Name: users_id_seq; Type: SEQUENCE OWNED BY; Schema: public; Owner: shashank
 --
 
 ALTER SEQUENCE public.users_id_seq OWNED BY public.users.id;
 
 
 --
--- Name: countries id; Type: DEFAULT; Schema: public; Owner: venkatesh
+-- Name: countries id; Type: DEFAULT; Schema: public; Owner: shashank
 --
 
 ALTER TABLE ONLY public.countries ALTER COLUMN id SET DEFAULT nextval('public.countries_id_seq'::regclass);
 
 
 --
--- Name: farmers id; Type: DEFAULT; Schema: public; Owner: venkatesh
+-- Name: farmers id; Type: DEFAULT; Schema: public; Owner: shashank
 --
 
 ALTER TABLE ONLY public.farmers ALTER COLUMN id SET DEFAULT nextval('public.farmers_id_seq'::regclass);
 
 
 --
--- Name: farms id; Type: DEFAULT; Schema: public; Owner: venkatesh
+-- Name: farms id; Type: DEFAULT; Schema: public; Owner: shashank
 --
 
 ALTER TABLE ONLY public.farms ALTER COLUMN id SET DEFAULT nextval('public.farms_id_seq'::regclass);
 
 
 --
--- Name: schedules id; Type: DEFAULT; Schema: public; Owner: venkatesh
+-- Name: schedules id; Type: DEFAULT; Schema: public; Owner: shashank
 --
 
 ALTER TABLE ONLY public.schedules ALTER COLUMN id SET DEFAULT nextval('public.schedules_id_seq'::regclass);
 
 
 --
--- Name: users id; Type: DEFAULT; Schema: public; Owner: venkatesh
+-- Name: users id; Type: DEFAULT; Schema: public; Owner: shashank
 --
 
 ALTER TABLE ONLY public.users ALTER COLUMN id SET DEFAULT nextval('public.users_id_seq'::regclass);
 
 
 --
--- Data for Name: alembic_version; Type: TABLE DATA; Schema: public; Owner: venkatesh
+-- Data for Name: alembic_version; Type: TABLE DATA; Schema: public; Owner: shashank
 --
 
 COPY public.alembic_version (version_num) FROM stdin;
@@ -261,7 +261,7 @@ COPY public.alembic_version (version_num) FROM stdin;
 
 
 --
--- Data for Name: countries; Type: TABLE DATA; Schema: public; Owner: venkatesh
+-- Data for Name: countries; Type: TABLE DATA; Schema: public; Owner: shashank
 --
 
 COPY public.countries (id, name) FROM stdin;
@@ -275,7 +275,7 @@ COPY public.countries (id, name) FROM stdin;
 
 
 --
--- Data for Name: farmers; Type: TABLE DATA; Schema: public; Owner: venkatesh
+-- Data for Name: farmers; Type: TABLE DATA; Schema: public; Owner: shashank
 --
 
 COPY public.farmers (id, phone_number, name, language, country_id) FROM stdin;
@@ -297,7 +297,7 @@ COPY public.farmers (id, phone_number, name, language, country_id) FROM stdin;
 
 
 --
--- Data for Name: farms; Type: TABLE DATA; Schema: public; Owner: venkatesh
+-- Data for Name: farms; Type: TABLE DATA; Schema: public; Owner: shashank
 --
 
 COPY public.farms (id, area, village, crop_grown, sowing_date, farmer_id, country_id) FROM stdin;
@@ -314,7 +314,7 @@ COPY public.farms (id, area, village, crop_grown, sowing_date, farmer_id, countr
 
 
 --
--- Data for Name: schedules; Type: TABLE DATA; Schema: public; Owner: venkatesh
+-- Data for Name: schedules; Type: TABLE DATA; Schema: public; Owner: shashank
 --
 
 COPY public.schedules (id, days_after_sowing, fertiliser, quantity, quantity_unit, price_per_unit, farm_id) FROM stdin;
@@ -331,7 +331,7 @@ COPY public.schedules (id, days_after_sowing, fertiliser, quantity, quantity_uni
 
 
 --
--- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: venkatesh
+-- Data for Name: users; Type: TABLE DATA; Schema: public; Owner: shashank
 --
 
 COPY public.users (id, username, password_hash, roles) FROM stdin;
@@ -342,42 +342,42 @@ COPY public.users (id, username, password_hash, roles) FROM stdin;
 
 
 --
--- Name: countries_id_seq; Type: SEQUENCE SET; Schema: public; Owner: venkatesh
+-- Name: countries_id_seq; Type: SEQUENCE SET; Schema: public; Owner: shashank
 --
 
 SELECT pg_catalog.setval('public.countries_id_seq', 6, true);
 
 
 --
--- Name: farmers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: venkatesh
+-- Name: farmers_id_seq; Type: SEQUENCE SET; Schema: public; Owner: shashank
 --
 
 SELECT pg_catalog.setval('public.farmers_id_seq', 15, true);
 
 
 --
--- Name: farms_id_seq; Type: SEQUENCE SET; Schema: public; Owner: venkatesh
+-- Name: farms_id_seq; Type: SEQUENCE SET; Schema: public; Owner: shashank
 --
 
 SELECT pg_catalog.setval('public.farms_id_seq', 10, true);
 
 
 --
--- Name: schedules_id_seq; Type: SEQUENCE SET; Schema: public; Owner: venkatesh
+-- Name: schedules_id_seq; Type: SEQUENCE SET; Schema: public; Owner: shashank
 --
 
 SELECT pg_catalog.setval('public.schedules_id_seq', 10, true);
 
 
 --
--- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: venkatesh
+-- Name: users_id_seq; Type: SEQUENCE SET; Schema: public; Owner: shashank
 --
 
 SELECT pg_catalog.setval('public.users_id_seq', 3, true);
 
 
 --
--- Name: alembic_version alembic_version_pkc; Type: CONSTRAINT; Schema: public; Owner: venkatesh
+-- Name: alembic_version alembic_version_pkc; Type: CONSTRAINT; Schema: public; Owner: shashank
 --
 
 ALTER TABLE ONLY public.alembic_version
@@ -385,7 +385,7 @@ ALTER TABLE ONLY public.alembic_version
 
 
 --
--- Name: countries countries_name_key; Type: CONSTRAINT; Schema: public; Owner: venkatesh
+-- Name: countries countries_name_key; Type: CONSTRAINT; Schema: public; Owner: shashank
 --
 
 ALTER TABLE ONLY public.countries
@@ -393,7 +393,7 @@ ALTER TABLE ONLY public.countries
 
 
 --
--- Name: countries countries_pkey; Type: CONSTRAINT; Schema: public; Owner: venkatesh
+-- Name: countries countries_pkey; Type: CONSTRAINT; Schema: public; Owner: shashank
 --
 
 ALTER TABLE ONLY public.countries
@@ -401,7 +401,7 @@ ALTER TABLE ONLY public.countries
 
 
 --
--- Name: farmers farmers_phone_number_key; Type: CONSTRAINT; Schema: public; Owner: venkatesh
+-- Name: farmers farmers_phone_number_key; Type: CONSTRAINT; Schema: public; Owner: shashank
 --
 
 ALTER TABLE ONLY public.farmers
@@ -409,7 +409,7 @@ ALTER TABLE ONLY public.farmers
 
 
 --
--- Name: farmers farmers_pkey; Type: CONSTRAINT; Schema: public; Owner: venkatesh
+-- Name: farmers farmers_pkey; Type: CONSTRAINT; Schema: public; Owner: shashank
 --
 
 ALTER TABLE ONLY public.farmers
@@ -417,7 +417,7 @@ ALTER TABLE ONLY public.farmers
 
 
 --
--- Name: farms farms_pkey; Type: CONSTRAINT; Schema: public; Owner: venkatesh
+-- Name: farms farms_pkey; Type: CONSTRAINT; Schema: public; Owner: shashank
 --
 
 ALTER TABLE ONLY public.farms
@@ -425,7 +425,7 @@ ALTER TABLE ONLY public.farms
 
 
 --
--- Name: schedules schedules_pkey; Type: CONSTRAINT; Schema: public; Owner: venkatesh
+-- Name: schedules schedules_pkey; Type: CONSTRAINT; Schema: public; Owner: shashank
 --
 
 ALTER TABLE ONLY public.schedules
@@ -433,7 +433,7 @@ ALTER TABLE ONLY public.schedules
 
 
 --
--- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: venkatesh
+-- Name: users users_pkey; Type: CONSTRAINT; Schema: public; Owner: shashank
 --
 
 ALTER TABLE ONLY public.users
@@ -441,7 +441,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: users users_username_key; Type: CONSTRAINT; Schema: public; Owner: venkatesh
+-- Name: users users_username_key; Type: CONSTRAINT; Schema: public; Owner: shashank
 --
 
 ALTER TABLE ONLY public.users
@@ -449,7 +449,7 @@ ALTER TABLE ONLY public.users
 
 
 --
--- Name: farmers farmers_country_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: venkatesh
+-- Name: farmers farmers_country_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: shashank
 --
 
 ALTER TABLE ONLY public.farmers
@@ -457,7 +457,7 @@ ALTER TABLE ONLY public.farmers
 
 
 --
--- Name: farms farms_country_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: venkatesh
+-- Name: farms farms_country_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: shashank
 --
 
 ALTER TABLE ONLY public.farms
@@ -465,7 +465,7 @@ ALTER TABLE ONLY public.farms
 
 
 --
--- Name: farms farms_farmer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: venkatesh
+-- Name: farms farms_farmer_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: shashank
 --
 
 ALTER TABLE ONLY public.farms
@@ -473,7 +473,7 @@ ALTER TABLE ONLY public.farms
 
 
 --
--- Name: schedules schedules_farm_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: venkatesh
+-- Name: schedules schedules_farm_id_fkey; Type: FK CONSTRAINT; Schema: public; Owner: shashank
 --
 
 ALTER TABLE ONLY public.schedules
@@ -483,4 +483,3 @@ ALTER TABLE ONLY public.schedules
 --
 -- PostgreSQL database dump complete
 --
-
