@@ -336,8 +336,8 @@ COPY public.schedules (id, days_after_sowing, fertiliser, quantity, quantity_uni
 
 COPY public.users (id, username, password_hash, roles) FROM stdin;
 1	superuser	$2b$12$RDRTsqfo7A/sYy/u4qedmu1Zgib3jAV7bHg9KRPAorhG9V5UDdZGa	{superuser}
-2	venkat	$2b$12$C0inPxAwq5TIert3I0RRFOtDkyPSUC5kZ5.iBoEm4WJWnHKTCCxwS	{viewer,admin}
-3	venkatesh	$2b$12$TZ4QRdL0wrtwYJOYWQGo7ePDLAJLHU/oxAKkktFXXqO9QmPXh7J2i	{viewer}
+2	admin	$2b$12$C0inPxAwq5TIert3I0RRFOtDkyPSUC5kZ5.iBoEm4WJWnHKTCCxwS	{viewer,admin}
+3	shashank	$2b$12$TZ4QRdL0wrtwYJOYWQGo7ePDLAJLHU/oxAKkktFXXqO9QmPXh7J2i	{viewer}
 \.
 
 
@@ -483,3 +483,4 @@ ALTER TABLE ONLY public.schedules
 --
 -- PostgreSQL database dump complete
 --
+
