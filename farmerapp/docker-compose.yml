@@ -4,7 +4,7 @@ services:
   db:
     image: postgres:13
     environment:
-      POSTGRES_USER: venkatesh
+      POSTGRES_USER: shashank
       POSTGRES_DB: farmer
       POSTGRES_HOST_AUTH_METHOD: trust
     ports:
@@ -19,7 +19,7 @@ services:
       - db
     environment:
       FLASK_APP: app.py
-      SQLALCHEMY_DATABASE_URI: postgresql://venkatesh@db:5432/farmer
+      SQLALCHEMY_DATABASE_URI: postgresql://shashank@db:5432/farmer
 
   nginx:
     image: nginx:stable
